@@ -1,2 +1,1 @@
-# hiveutil
-Java hive JDBC client
+Utility soft for JDBC connectivity to HIVE
