@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+    <Properties>
+        <Property name="logFileName">/tmp/genomagicapi.log</Property>
+    </Properties>
+    <Appenders>
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss,SSS}{GMT+2} GMT+2\t%-5p\t%t\t%logger\t%m %X{queryUUID}%n"/>
+        </Console>
+        <File name="TEMP" fileName="${sys:logFileName}"> <!--file name taken from system property-->
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss,SSS}{GMT+2} GMT+2\t%-5p\t%t\t%logger\t%m %X{queryUUID}%n"/>
+        </File>
+        <Async name="ASYNC">
+            <AppenderRef ref="TEMP"/>
+            <AppenderRef ref="CONSOLE"/>
+        </Async>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.nrgene.genomagicapi" level="debug"
+                additivity="false"> <!--additivity false to avoid duplicate entries in logger-->
+            <AppenderRef ref="ASYNC"/>
+        </Logger>
+        <Root level="info">
+            <AppenderRef ref="ASYNC"/>
+        </Root>
+    </Loggers>
+</Configuration>
