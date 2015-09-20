@@ -6,7 +6,7 @@ Quick start guide :
 
 1. Check out a repo : 
 
-$git clone git@github.com:anton-mishel/hiveutil.git
+$git clone https://github.com/anton-mishel/hiveutil.git
 
 
 2. Adjust hostname you would like to connect to : 
