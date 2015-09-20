@@ -1,0 +1,5 @@
+com/java/hiveutil/HiveRemoteCommands.class
+com/java/hiveutil/IResultSetHandler.class
+com/java/hiveutil/CountingResultSetHandler.class
+com/java/hiveutil/HiveUtil.class
+com/java/hiveutil/WriterResultSetHandler.class

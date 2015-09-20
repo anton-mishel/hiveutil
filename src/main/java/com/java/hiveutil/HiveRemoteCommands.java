@@ -18,9 +18,10 @@ public class HiveRemoteCommands {
 	private final static String ERROR_PREFIX = "ERROR: ";
 
 	//TODO Move to external configuration
-	private final static String DB_URL = "jdbc:hive2://lab-hdp01:10000/default";
-	private final static String USER = "mapr";
-	private final static String PASS = "mapr";
+	private final static String DB_URL = "jdbc:hive2://hiveserver2-nydc1-online.nydc1.outbrain.com:10000/default";
+//	private final static String DB_URL = "jdbc:hive2://192.168.31.138:10000/default";
+	private final static String USER = "hive";
+	private final static String PASS = "hive";
 
 	public static void usage(){
 		System.out.println(USAGE);
